@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Car Dealership</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashstyles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Car Dealership Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="add_inventory.html">Add To Inventory</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+
+            <div style="max-width: 600px;">
+
+                <canvas id="makeChart" width="400" height="200"></canvas>
+
+            </div>
+        </section>
+
+        <section id="images">
+            <h2>Inventory Images</h2>
+            <a href="http://mercedes-benz.ca"><img src="mb.jpg" alt="Mercedes Benz" /></a>
+            <a href="https://www.audi.ca/ca/web/en/models/a7"><img src="audi.jpg" alt="Audi" /></a>
+            <a href="https://www.dacia.co.uk/vehicles/duster"><img src="dacia.jpg" alt="Dacia" /></a>
+        </section>
+    </main>
+    <footer>
+        &copy; 2023 Car Dealership. All rights reserved.
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+
+            var sampleData = [
+                ["Mercedes-Benz", "E-Class", 2022, "Green", "Hatchback", "AMG", "Petrol + Electric", "2.0L", "I4", "Automatic", "AWD", 135895, 20000],
+                ["Audi", "RS7", 1990, "Brown", "Sedan", "XLE", "Diesel", "3.0L", "I4", "Manual", "FWD", 125322, 60000],
+                ["Dacia", "Duster", 2020, "Gray", "Sports", "XT", "Electric", "3.0L", "V8", "CVT", "RWD", 300021, 600000],
+                ["Renault", "Clio", 2019, "White", "SUV", "LE", "Petrol + Electric", "1.2L", "V8", "Automated Manual", "RWD", 80000, 32000],
+                ["Mini", "Cooper", 2015, "Blue", "Minivan", "CE", "Hydrogen", "3.0L", "V8", "Manual", "4WD", 25000, 24000], ["Mercedes-Benz", "ML350", 2015, "BLue", "Suv", "AMG", "Petrol + Electric", "2.0L", "I4", "Automatic", "AWD", 135895, 60000]
+            ];
+            var inventoryData = sampleData;
+
+            // Count vehicles per make
+            var makeCounts = {};
+            inventoryData.forEach(function (item) {
+                var make = item[0];
+                makeCounts[make] = (makeCounts[make] || 0) + 1;
+            });
+
+            // Prepare data for the make chart
+            var makeLabels = Object.keys(makeCounts);
+            var makeData = Object.values(makeCounts);
+
+            // Create Make Chart
+            var makeCtx = document.getElementById('makeChart').getContext('2d');
+            var makeChart = new Chart(makeCtx, {
+                type: 'bar',
+                data: {
+                    labels: makeLabels,
+                    datasets: [{
+                        label: 'Number of Vehicles',
+                        data: makeData,
+                        backgroundColor: 'rgba(127, 255, 212, 0.2)',
+                        borderColor: 'rgba(127, 255, 212, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

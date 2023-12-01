@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Motors Inventory </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.8/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/date-1.5.1/r-2.5.0/rg-1.4.1/sp-2.2.0/sl-1.7.0/datatables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.8/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/date-1.5.1/r-2.5.0/rg-1.4.1/sp-2.2.0/sl-1.7.0/datatables.min.js"></script>
+    <link rel="stylesheet" href="tablestyles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Dealership Inventory</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="add_inventory.html">Add To Inventory</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <main id="maininventory">
+        <section id="inventory">
+            <h2>Inventory Data Table</h2>
+            <div class="tableContainer">
+                <table id="inventory-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Color</th>
+                            <th>Body Style</th>
+                            <th>Trim</th>
+                            <th>Fuel Type</th>
+                            <th>Engine Size (L)</th>
+                            <th>Engine Configuration</th>
+                            <th>Transmission Type</th>
+                            <th>DriveTrain</th>
+                            <th>Mileage</th>
+                            <th>Cost Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-table-body">
+                        <tr>
+                            <td>Mercedes-Benz</td>
+                            <td>E-Class</td>
+                            <td>2022</td>
+                            <td>Green</td>
+                            <td>Hatchback</td>
+                            <td>AMG</td>
+                            <td>Petrol + Electric</td>
+                            <td>2.0L</td>
+                            <td>I4</td>
+                            <td>Automatic</td>
+                            <td>AWD</td>
+                            <td>135895</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>Audi</td>
+                            <td>RS7</td>
+                            <td>1990</td>
+                            <td>Brown</td>
+                            <td>Sedan</td>
+                            <td>XLE</td>
+                            <td>Diesel</td>
+                            <td>3.0L</td>
+                            <td>I4</td>
+                            <td>Manual</td>
+                            <td>FWD</td>
+                            <td>125322</td>
+                            <td>60000</td>
+                        </tr>
+                        <tr>
+                            <td>Dacia</td>
+                            <td>Duster</td>
+                            <td>2020</td>
+                            <td>Gray</td>
+                            <td>Sports</td>
+                            <td>XT</td>
+                            <td>Electric</td>
+                            <td>3.0L</td>
+                            <td>V8</td>
+                            <td>CVT</td>
+                            <td>RWD</td>
+                            <td>300021</td>
+                            <td>600000</td>
+                        </tr>
+                        <tr>
+                            <td>Renault</td>
+                            <td>Clio</td>
+                            <td>2019</td>
+                            <td>White</td>
+                            <td>SUV</td>
+                            <td>LE</td>
+                            <td>Petrol + Electric</td>
+                            <td>1.2L</td>
+                            <td>V8</td>
+                            <td>Automated Manual</td>
+                            <td>RWD</td>
+                            <td>80000</td>
+                            <td>32000</td>
+                        </tr>
+                        <tr>
+                            <td>Mini</td>
+                            <td>Cooper</td>
+                            <td>2015</td>
+                            <td>Blue</td>
+                            <td>Minivan</td>
+                            <td>CE</td>
+                            <td>Hydrogen</td>
+                            <td>3.0L</td>
+                            <td>V8</td>
+                            <td>Manual</td>
+                            <td>4WD</td>
+                            <td>25000</td>
+                            <td>24000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Car Dealership. All rights reserved.</p>
+    </footer>
+</body>
+</html>
