@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,7 @@
     <title>Car Dealership Inventory Management</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="script.js"></script>
-           
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +17,7 @@
             <li><a href="inventory.html">Inventory</a></li>
             <li><a href="add_inventory.html">Add To Inventory</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="index.html">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
     </nav>
     <main>
@@ -28,6 +27,7 @@
 
                 <label for="make">Make:</label>
                 <select id="make" name="make" required>
+                    <option value="" disabled selected>Select an option</option>
                     <option value="Toyota">Toyota</option>
                     <option value="Honda">Honda</option>
                     <option value="Ford">Ford</option>
@@ -37,6 +37,7 @@
 
                 <label for="model">Model:</label>
                 <select id="model" name="model" required>
+                    <option value="" disabled selected>Select an option</option>
                     <option value="Camry">Camry</option>
                     <option value="Accord">Accord</option>
                     <option value="F150">F150</option>
@@ -49,16 +50,17 @@
 
                 <label for="color">Color:</label>
                 <select id="color" name="color" required>
+                    <option value="" disabled selected>Select an option</option>
                     <option value="White">White</option>
                     <option value="Black">Black</option>
                     <option value="Silver">Silver</option>
                     <option value="Gray">Gray</option>
                     <option value="Red">Red</option>
-
                 </select>
 
                 <label for="body-style">Body Style:</label>
                 <select id="body-style" name="body-style">
+                    <option value="" disabled selected>Select an option</option>
                     <option value="Sedan">Sedan</option>
                     <option value="Coupe">Coupe</option>
                     <option value="Hatchback">Hatchback</option>
@@ -79,6 +81,7 @@
 
                 <label for="fuel-type">Fuel Type:</label>
                 <select id="fuel-type" name="fuel-type" required>
+                    <option value="" disabled selected>Select an option</option>
                     <option value="GASOLINE">Gasoline</option>
                     <option value="DIESEL">Diesel</option>
                     <option value="ELECTRIC">Electric</option>
@@ -94,6 +97,7 @@
 
                 <label for="engine-configuration">Engine Configuration:</label>
                 <select id="engine-configuration" name="engine-configuration">
+                    <option value="" disabled selected>Select an option</option>
                     <option value="I4">I4</option>
                     <option value="V6">V6</option>
                     <option value="V8">V8</option>
@@ -109,6 +113,7 @@
 
                 <label for="transmission-type">Transmission Type:</label>
                 <select id="transmission-type" name="transmission-type" required>
+                    <option value="" disabled selected>Select an option</option>
                     <option value="Automatic">Automatic</option>
                     <option value="CVT">CVT</option>
                     <option value="Manual">Manual</option>
@@ -118,6 +123,7 @@
 
                 <label for="drive-train">DriveTrain:</label>
                 <select id="drive-train" name="drive-train">
+                    <option value="" disabled selected>Select an option</option>
                     <option value="FWD">FWD</option>
                     <option value="AWD">AWD</option>
                     <option value="RWD">RWD</option>
